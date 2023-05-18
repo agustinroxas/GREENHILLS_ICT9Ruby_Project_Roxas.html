@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert Length</title>
+</head>
+<body>
+  <h1>Convert Length</h1>
+
+  <label for="millimeters">Millimeters:</label>
+  <input type="number" id="millimeters" oninput="convertLength()" />
+
+  <h3>Conversion Results:</h3>
+  <p id="centimeters"></p>
+  <p id="meters"></p>
+  <p id="kilometers"></p>
+
+  <script>
+    function convertLength() {
+      var millimeters = document.getElementById("millimeters").value;
+
+      // Conversion calculations
+      var centimeters = millimeters / 10;
+      var meters = millimeters / 1000;
+      var kilometers = millimeters / 1000000;
+
+      // Output the results
+      document.getElementById("centimeters").textContent = "Centimeters: " + centimeters;
+      document.getElementById("meters").textContent = "Meters: " + meters;
+      document.getElementById("kilometers").textContent = "Kilometers: " + kilometers;
+    }
+  </script>
+</body>
+</html>
